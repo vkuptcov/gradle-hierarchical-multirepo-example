@@ -1,0 +1,13 @@
+rootProject.name = 'multirepo-app'
+
+//file('modules').listFiles().each { File moduleBuild ->
+//    includeBuild moduleBuild
+//}
+
+includeBuild 'modules/number-utils'
+includeBuild 'modules/string-utils'
+includeBuild ('modules/common') {
+    dependencySubstitution {
+        substitute module("org.sample:common") with project(":")
+    }
+}
