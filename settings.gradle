@@ -10,7 +10,7 @@ include './common'
 
 includeBuild 'modules/number-utils'
 includeBuild 'modules/string-utils'
-includeBuild ('./common') {
+includeBuild ('common') {
     dependencySubstitution {
         substitute module("org.sample:common") with project(":")
     }

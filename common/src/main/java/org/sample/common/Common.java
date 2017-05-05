@@ -2,5 +2,5 @@ package org.sample.common;
 
 public class Common {
 
-    public static int CONSTANT = 1;
+    public static int CONSTANT = 3;
 }
