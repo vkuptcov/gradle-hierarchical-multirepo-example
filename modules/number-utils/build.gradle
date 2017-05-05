@@ -1,22 +1,12 @@
 apply plugin: 'java'
+apply plugin: 'application'
 apply plugin: 'idea'
 
 group "org.sample"
 version "1.0"
 
-repositories {
-    ivy {
-        name 'localrepo'
-        url file("../../../local-repo")
-    }
-}
+mainClassName = "org.sample.numberutils.Main"
 
 dependencies {
     compile "org.sample:common:0.1"
-}
-
-uploadArchives {
-    repositories {
-        add project.repositories.localrepo
-    }
 }

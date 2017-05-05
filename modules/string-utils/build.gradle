@@ -9,15 +9,5 @@ dependencies {
 }
 
 repositories {
-    ivy {
-        name 'localrepo'
-        url file("../../../local-repo")
-    }
     jcenter()
-}
-
-uploadArchives {
-    repositories {
-        add project.repositories.localrepo
-    }
 }

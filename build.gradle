@@ -13,9 +13,6 @@ dependencies {
 }
 
 repositories {
-    ivy {
-        url project.file("../local-repo")
-    }
     jcenter()
 }
 
@@ -24,3 +21,8 @@ task publishDeps {
     dependsOn gradle.includedBuilds*.task(':uploadArchives')
 }
 // END SNIPPET publishDeps
+
+//task execute(type:JavaExec) {
+//    main = mainClass
+//    classpath = sourceSets.main.runtimeClasspath
+//}

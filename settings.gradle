@@ -4,6 +4,10 @@ rootProject.name = 'multirepo-app'
 //    includeBuild moduleBuild
 //}
 
+include 'modules/number-utils'
+include 'modules/string-utils'
+include 'modules/common'
+
 includeBuild 'modules/number-utils'
 includeBuild 'modules/string-utils'
 includeBuild ('modules/common') {
