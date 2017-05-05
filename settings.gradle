@@ -6,11 +6,11 @@ rootProject.name = 'multirepo-app'
 
 include 'modules/number-utils'
 include 'modules/string-utils'
-include 'modules/common'
+include './common'
 
 includeBuild 'modules/number-utils'
 includeBuild 'modules/string-utils'
-includeBuild ('modules/common') {
+includeBuild ('./common') {
     dependencySubstitution {
         substitute module("org.sample:common") with project(":")
     }
