@@ -7,17 +7,7 @@ version "1.0"
 
 mainClassName = "org.sample.myapp.Main"
 
-configurations.all {
-    resolutionStrategy {
-        dependencySubstitution {
-            substitute module('org.sample:common') with project(':common')
-            substitute module('org.sample:number-utils') with project(':modules/number-utils')
-            substitute module('org.sample:string-utils') with project(':modules/string-utils')
-        }
-    }
-}
-
-subprojects {
+allprojects {
     configurations.all {
         resolutionStrategy {
             dependencySubstitution {
